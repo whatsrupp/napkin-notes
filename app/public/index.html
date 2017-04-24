@@ -1,1 +1,50 @@
-<p>hello world</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Makers!</title>
+  </head>
+
+  <body>
+    <br><br>
+    <table><tr><td>
+    <a href="#Alice">Alice</a>
+    <div id="maker"></div>
+</td><td>
+    <a href="#Steph">Steph</a>
+    <div id="maker"></div>
+</td><td>
+    <a href="#Nick">Nick</a>
+    <div id="maker"></div>
+</td><td>
+    <a href="#Hasan">Hasan</a>
+    <div id="maker"></div>
+</td><td>
+    <a href="#Ed">Ed</a>
+    <div id="maker"></div>
+</td></tr></table>
+
+    <script>
+      makeUrlChangeShowMakerForCurrentPage();
+
+      function makeUrlChangeShowMakerForCurrentPage() {
+        window.addEventListener("hashchange", showMakerForCurrentPage);
+      };
+
+      function showMakerForCurrentPage() {
+        showMaker(getMakerFromUrl(window.location));
+      };
+
+      function getMakerFromUrl(location) {
+        return location.hash.split("#")[1];
+      };
+
+      function showMaker(maker) {
+        document
+          .getElementById("maker")
+          .innerHTML = "<h1>"+maker+"</h1>";
+      };
+
+    </script>
+  </body>
+</html>
