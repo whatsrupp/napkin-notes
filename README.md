@@ -8,7 +8,7 @@ Developers:
 Alice Cheung
 Stephanie Crampin
 Nick Rupp
-Hasan Sultan
+Hasan Sonmez
 Edward Ward
 
 NR,SC,AC,HS,EW
