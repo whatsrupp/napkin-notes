@@ -13,3 +13,9 @@ Edward Ward
 
 NR,SC,AC,HS,EW
 Which handily rearranges into 'Crass-Wench'. Lovely.
+
+
+RUNNING THE SERVER:
+cd 'my/root/file/path'
+'brew install node"
+"node bin/http-server"
