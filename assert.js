@@ -13,7 +13,10 @@ var assert = {
 
   isArrayEqual: function(assertionToCheck, matcher) {
     for (var i = 0; i < assertionToCheck.length; ++i) {
-      if (assertionToCheck[i] !== matcher[i]) throw new Error("Assertion Failed: " + assertionToCheck + " Does not Equal " + matcher);
+      if (assertionToCheck[i] !== matcher[i]) {
+        throw new Error ("Assertion Failed: " + assertionToCheck + " Does not Equal " + matcher);
+      }
     }
   }
+
 };
