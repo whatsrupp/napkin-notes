@@ -21,5 +21,9 @@ Note.prototype.shorten = function (string) {
   return string.slice(0,20);
 };
 
+Note.prototype.getShortlist = function() {
+  return this.shortlist;
+};
+
   exports.Note = Note;
 })(this);
