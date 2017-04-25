@@ -6,7 +6,6 @@ function clickButton(id){
     button.click();
   }
 }
-
 function clickSubmit(id){
   var formButton = document.getElementById(id);
   if(formButton.tagName != 'INPUT' || formButton.type !='submit'){
@@ -15,13 +14,19 @@ function clickSubmit(id){
     formButton.click();
   }
 }
-
 function fillInTextBox(id, text){
   var textBox = document.getElementById(id);
-
   if((textBox.tagName == 'INPUT' && textBox.type == 'text')|| textBox.tagName == 'TEXTAREA'){
     textBox.value = text;
   }else{
     throw new Error("Nearly there! But unfortunately this isn't a text field :(");
+  }
+}
+function clickListItem(id) {
+  link = document.getElementById(id);
+  if (link.tagName != 'li') {
+    throw new Error("Id is not for an element in the list")
+  } else {
+    link.click();
   }
 }
