@@ -20,6 +20,6 @@ Note.prototype.getShortlist = function() {
   exports.Note = Note;
 })(this);
 
-var note = new Note
+var note = new Note();
 note.createNote('The novel strays on top of the gorgeous purchase.');
 note.createNote('The potato strays on top of the gorgeous purchase.');
