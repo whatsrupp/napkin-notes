@@ -1,7 +1,12 @@
-function add(){
-  var element = document.createElement('input');
+  function add(){
+    var element = document.createElement('input');
 
-  element.setAttribute("type",'text');
+    element.setAttribute("type",'text');
 
-  document.body.appendChild(element);
-}
+    document.body.appendChild(element);
+  }
+
+
+  function show(par){
+    document.write(par);
+  }
