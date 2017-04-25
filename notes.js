@@ -1,12 +1,4 @@
 (function(exports) {
-  function Circle() {
-    this.radius = 10;
-  }
-
-  exports.Circle = Circle;
-})(this);
-
-(function(exports) {
   function Note() {
     this.notepad = [];
     this.shortlist = [];
@@ -27,3 +19,7 @@ Note.prototype.getShortlist = function() {
 
   exports.Note = Note;
 })(this);
+
+var note = new Note
+note.createNote('The novel strays on top of the gorgeous purchase.');
+note.createNote('The potato strays on top of the gorgeous purchase.');
