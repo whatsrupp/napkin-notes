@@ -2,18 +2,13 @@ function addTextArea(){
   var div = document.createElement('div');
   div.setAttribute("class",'text-area');
 
-  var element = document.createElement('input');
-  element.setAttribute("type",'textarea');
-
-  element.setAttribute("style",'width: 500px; font-size: 15px; height: 150px;');
-  element.setAttribute("rows",'20');
+  var element = document.createElement('textarea');
+  element.setAttribute("rows",'10');
   element.setAttribute("cols",'50');
 
   div.appendChild(element);
   document.body.appendChild(div);
 }
-
-
 
 function textNodesUnder(el){
   var n, a=[], walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);
@@ -33,10 +28,10 @@ function concatenateTextNodes(textNodeArray){
 function checkStringForText(mainString, soughtString){
   var test = new RegExp(soughtString)
   return test.test(mainString);
+}
 
 function checkURL() {
   return window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
-
 }
 
 function addButton(){
