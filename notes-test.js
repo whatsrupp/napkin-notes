@@ -13,14 +13,9 @@ function getFirst20Chars() {
 
 function noteListLoop() {
   var note = new Note();
-  note.createNote('555555555555555555555555555555');
-  note.createNote('444444444444444444444444444444');
-  note.createNote('333333333333333333333333333333');
-  note.createNote('222222222222222222222222222222');
-  note.createNote('111111111111111111111111111111');
-  assert.isEqual(note.shortlist,['55555555555555555555','44444444444444444444',
-                                  '33333333333333333333','22222222222222222222',
-                                  '11111111111111111111']);
+  note.createNote('The novel strays on top of the gorgeous purchase.');
+  note.createNote('The potato strays on top of the gorgeous purchase.');
+  assert.isArrayEqual(note.getShortlist(), ["The novel strays on ", "The potato strays on"]);
 }
 
 noteListLoop();
