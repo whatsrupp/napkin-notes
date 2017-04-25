@@ -6,7 +6,7 @@ function addTextArea(){
   var element = document.createElement('textarea');
   element.setAttribute("rows",'10');
   element.setAttribute("cols",'50');
-
+  element.setAttribute('id','lemon')
   div.appendChild(element);
   document.body.appendChild(div);
 }

@@ -15,3 +15,13 @@ function clickSubmit(id){
     formButton.click();
   }
 }
+
+function fillInTextBox(id, text){
+  var textBox = document.getElementById(id);
+
+  if((textBox.tagName == 'INPUT' && textBox.type == 'text')|| textBox.tagName == 'TEXTAREA'){
+    textBox.value = text;
+  }else{
+    throw new Error("Nearly there! But unfortunately this isn't a text field :(");
+  }
+}
