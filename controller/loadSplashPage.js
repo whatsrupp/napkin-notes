@@ -2,9 +2,7 @@
 
   setupPageDivs = function (){
 
-    var headerDiv = document.createElement('div');
-    headerDiv.setAttribute("class",'title-div');
-    headerDiv.setAttribute('id','header');
+    var headerDiv = setUpHeaderDiv();
     document.body.appendChild(headerDiv);
 
     var noteInputDiv = document.createElement('div');
@@ -25,6 +23,24 @@
 
     document.body.appendChild(noteListDiv);
 
+  }
+
+  addToPage = function(element){
+    document.body.appendChild(element)
+  }
+
+  setUpHeaderDiv = function(){
+    var headerDiv = document.createElement('div');
+    headerDiv.setAttribute("class",'title-div');
+    headerDiv.setAttribute('id','header');
+
+    var pageTitle = document.createElement('H1')
+    var titleText = document.createTextNode("Napkin Notes");
+    pageTitle.appendChild(titleText)
+    pageTitle.setAttribute('id', 'page-title')
+
+    headerDiv.appendChild(pageTitle)
+    return headerDiv
   }
 
   function addForm(){
