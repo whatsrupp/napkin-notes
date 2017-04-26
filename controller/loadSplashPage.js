@@ -29,20 +29,23 @@
 
   function addForm(){
     var form = document.createElement('form');
+    form.setAttribute('id','note-input-form')
     form.setAttribute('action','/note-controller.js');
     return form;
   }
+
   function addTextArea(){
     var textarea = document.createElement('textarea');
     textarea.setAttribute('rows','10');
     textarea.setAttribute('cols','50');
-    textarea.setAttribute('id','newNote');
+    textarea.setAttribute('id','note-input-field');
     return textarea;
   }
+
   function addButton(){
     var button = document.createElement('input');
     button.setAttribute('type','submit');
-    button.setAttribute('id','createNote');
+    button.setAttribute('id','create-note-button');
     button.setAttribute('value',"Create Note");
     return button;
   }
