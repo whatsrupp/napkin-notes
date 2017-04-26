@@ -8,8 +8,9 @@
     note.createNote(noteText);
     noteList.storeNote(note);
 
-    var noteController = new NoteController(noteList);
-    noteController.appendList();
+    // var noteController = new NoteController(noteList);
+    // noteController.appendList();
+    updateNoteList();
     textarea.value = '';
   }
 
