@@ -14,8 +14,25 @@ Edward Ward
 NR,SC,AC,HS,EW
 Which handily rearranges into 'Crass-Wench'. Lovely.
 
+INITIALIZING:
+
 
 RUNNING THE SERVER:
 cd 'my/root/file/path'
 'brew install node"
 "node bin/http-server"
+
+1) Install Node
+Assuming homebrew installed:
+brew install node
+
+2) Download Required Node Packages
+-http Server
+cd napkin-notes/home/directory/location
+npm install
+
+3) Start the app
+node startServer
+
+4) Visit
+localhost:3000
