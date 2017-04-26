@@ -18,4 +18,7 @@ Which handily rearranges into 'Crass-Wench'. Lovely.
 RUNNING THE SERVER:
 cd 'my/root/file/path'
 'brew install node"
-"node bin/http-server"
+
+
+'node serverStart.js'
+npm init

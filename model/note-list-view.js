@@ -3,12 +3,13 @@
   function NoteListView(notelist) {
 
     NoteListView.prototype.listNotes = function() {
-      list = document.createElement('ul');
+      var list = document.createElement('ul');
       list.setAttribute('id','notes');
 
        for(var i = 0; i < notelist.notepad.length; i++) {
          var noteItem = document.createElement('li');
-         var noteString = document.createTextNode(notelist.notepad[i].text);
+         var abbreviatedNote = notelist.notepad[i].text.slice(0, 20);
+         var noteString = document.createTextNode(abbreviatedNote);
          noteItem.appendChild(noteString);
          list.appendChild(noteItem);
 
