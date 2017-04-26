@@ -21,7 +21,8 @@
 
     document.body.appendChild(noteListDiv);
 
-  }
+  };
+
 
   addToPage = function(element){
     document.body.appendChild(element)
@@ -56,12 +57,7 @@
 
   }
 
-  function addForm(){
-    var form = document.createElement('form');
-    form.setAttribute('id','note-input-form')
-    form.setAttribute('action','/note-controller.js');
-    return form;
-  }
+
 
   function addTextArea(){
     var textarea = document.createElement('textarea');
@@ -72,24 +68,43 @@
   }
 
   function addButton(){
-    var button = document.createElement('input');
-    button.setAttribute('type','submit');
+    var button = document.createElement('button');
+    var buttonName = document.createTextNode('Create');
+    button.appendChild(buttonName);
     button.setAttribute('id','create-note-button');
-    button.setAttribute('value',"Create Note");
     return button;
   }
 
   function buildForm() {
-    var form = addForm();
     var div = document.getElementById('note-input-div');
-    form.appendChild(addTextArea());
-    form.appendChild(addButton());
-    div.appendChild(form);
+    div.appendChild(addTextArea());
+    div.appendChild(addButton());
+  }
+  function buildList() {
+  var list = document.createElement('ul');
+  var div = document.getElementById('note-list-div');
+  list.setAttribute('id','note-list');
+  div.appendChild(list);
   }
 
+  exports.buildList = buildList;
   exports.buildForm = buildForm;
-exports.setupPageDivs = setupPageDivs
+  exports.setupPageDivs = setupPageDivs;
 })(this);
 
-setupPageDivs()
+setupPageDivs();
 buildForm();
+buildList();
+var noteList = new NoteList();
+function createNote() {
+  var textarea = document.getElementById('note-input-field');
+  var note = document.getElementById('note-input-field').value;
+  noteList.createAndStore(note);
+  var noteController = new NoteController(noteList);
+  noteController.appendList();
+  textarea.value = '';
+}
+
+//
+var form = document.getElementById('create-note-button');
+form.addEventListener("click", createNote, false);
