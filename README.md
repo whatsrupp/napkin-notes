@@ -20,6 +20,7 @@ INITIALIZING:
 RUNNING THE SERVER:
 cd 'my/root/file/path'
 'brew install node"
+
 "node bin/http-server"
 
 1) Install Node
@@ -32,7 +33,7 @@ cd napkin-notes/home/directory/location
 npm install
 
 3) Start the app
-node startServer
+node serverStart
 
 4) Visit
 localhost:3000
