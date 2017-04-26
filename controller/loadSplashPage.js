@@ -49,21 +49,28 @@
     div.appendChild(addTextArea());
     div.appendChild(addButton());
   }
+  function buildList() {
+  var list = document.createElement('ul');
+  var div = document.getElementById('note-list-div');
+  list.setAttribute('id','note-list');
+  div.appendChild(list);
+  }
 
-
+  exports.buildList = buildList;
   exports.buildForm = buildForm;
   exports.setupPageDivs = setupPageDivs;
 })(this);
 
 setupPageDivs();
 buildForm();
+buildList();
 var noteList = new NoteList();
 function createNote() {
   var textarea = document.getElementById('note-input-field');
   var note = document.getElementById('note-input-field').value;
+  noteList.createAndStore(note);
   var noteController = new NoteController(noteList);
   noteController.appendList();
-  noteList.createAndStore(note);
   textarea.value = '';
 }
 

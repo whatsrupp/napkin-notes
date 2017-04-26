@@ -6,8 +6,7 @@
   }
 
   NoteController.prototype.appendList = function() {
-    list = this.noteListView.listNotes();
-    document.body.appendChild(list);
+    this.noteListView.listNotes();
   };
 
 
