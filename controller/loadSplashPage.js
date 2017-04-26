@@ -1,4 +1,31 @@
-(function(exports) {
+(function(exports){
+
+  setupPageDivs = function (){
+
+    var headerDiv = document.createElement('div');
+    headerDiv.setAttribute("class",'title-div');
+    headerDiv.setAttribute('id','header');
+    document.body.appendChild(headerDiv);
+
+    var noteInputDiv = document.createElement('div');
+    noteInputDiv.setAttribute("class",'note-input-div');
+    noteInputDiv.setAttribute("id",'note-input-div');
+
+    document.body.appendChild(noteInputDiv);
+
+
+    var subtitleDiv = document.createElement('div');
+    subtitleDiv.setAttribute("class",'title-div');
+    subtitleDiv.setAttribute('id','subtitle');
+    document.body.appendChild(subtitleDiv);
+
+    var noteListDiv = document.createElement('div');
+    noteListDiv.setAttribute("class",'note-list-div');
+    noteListDiv.setAttribute("id",'note-list-div');
+
+    document.body.appendChild(noteListDiv);
+
+  }
 
   function addForm(){
     var form = document.createElement('form');
@@ -22,13 +49,15 @@
 
   function buildForm() {
     var form = addForm();
+    var div = document.getElementById('note-input-div');
     form.appendChild(addTextArea());
     form.appendChild(addButton());
-    document.body.appendChild(form);
+    div.appendChild(form);
   }
 
   exports.buildForm = buildForm;
+exports.setupPageDivs = setupPageDivs
 })(this);
 
-
+setupPageDivs()
 buildForm();

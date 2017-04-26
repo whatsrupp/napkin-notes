@@ -1,0 +1,24 @@
+body {
+  background-color: blue;
+}
+
+.title-div{
+  margin: auto;
+  background-color: red;
+  height: 300px;
+  width: 80%;
+}
+
+.note-input-div{
+  margin: auto;
+  background-color: green;
+  height: 100px;
+  width: 80%;
+}
+
+.note-list-div{
+  margin: auto;
+  background-color:yellow;
+  height:200px;
+  width: 80%;
+}
