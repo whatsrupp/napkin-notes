@@ -2,9 +2,7 @@
 
   setupPageDivs = function (){
 
-    var headerDiv = document.createElement('div');
-    headerDiv.setAttribute("class",'title-div');
-    headerDiv.setAttribute('id','header');
+    var headerDiv = setUpHeaderDiv();
     document.body.appendChild(headerDiv);
 
     var noteInputDiv = document.createElement('div');
@@ -14,9 +12,7 @@
     document.body.appendChild(noteInputDiv);
 
 
-    var subtitleDiv = document.createElement('div');
-    subtitleDiv.setAttribute("class",'title-div');
-    subtitleDiv.setAttribute('id','subtitle');
+    var subtitleDiv = setUpSubTitleDiv();
     document.body.appendChild(subtitleDiv);
 
     var noteListDiv = document.createElement('div');
@@ -26,6 +22,41 @@
     document.body.appendChild(noteListDiv);
 
   };
+
+
+  addToPage = function(element){
+    document.body.appendChild(element)
+  }
+
+  setUpHeaderDiv = function(){
+    var headerDiv = document.createElement('div');
+    headerDiv.setAttribute("class",'title-div');
+    headerDiv.setAttribute('id','header');
+
+    var pageTitle = document.createElement('H1')
+    var titleText = document.createTextNode("Napkin Notes");
+    pageTitle.appendChild(titleText)
+    pageTitle.setAttribute('id', 'page-title')
+
+    headerDiv.appendChild(pageTitle)
+    return headerDiv
+  }
+
+  setUpSubTitleDiv = function(){
+    var subtitleDiv = document.createElement('div');
+    subtitleDiv.setAttribute("class",'title-div');
+    subtitleDiv.setAttribute('id','subtitle-div');
+    var subtitle = document.createElement('H2')
+    var titleText = document.createTextNode("List Of Notes");
+
+    subtitle.setAttribute('id','subtitle');
+    subtitle.appendChild(titleText);
+    subtitleDiv.appendChild(subtitle);
+
+    return subtitleDiv
+
+  }
+
 
 
   function addTextArea(){

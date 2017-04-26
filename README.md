@@ -1,39 +1,39 @@
-Napkin Notes:
+# Napkin Notes
 
-Named for the offhand way in which this app bins your scrawlings everytime you
-reload the page. Handy? Possibly Not.
+Named for the offhand way in which this app deletes your scrawlings everytime you
+reload the page. Handy? Possibly Not. A good way to learn single page web apps? Probably!
 
+---
 
-Developers:
-Alice Cheung
-Stephanie Crampin
-Nick Rupp
-Hasan Sonmez
-Edward Ward
+## Developers
+-Alice Cheung
+-Stephanie Crampin
+-Nick Rupp
+-Hasan Sonmez
+-Edward Ward
 
-NR,SC,AC,HS,EW
-Which handily rearranges into 'Crass-Wench'. Lovely.
+### Fun Fact
+Our initials are: 'NR,SC,AC,HS,EW' which handily rearranges into 'Crass-Wench'. Lovely.
 
-INITIALIZING:
-
-
-RUNNING THE SERVER:
-cd 'my/root/file/path'
-'brew install node"
-
-"node bin/http-server"
+## Set Up
 
 1) Install Node
-Assuming homebrew installed:
-brew install node
+This cracking installation need node. If you're on a mac (assuming that homebrew is installed - if not head over here:)
+In your terminal run:
+```
+  brew install node
+```
 
-2) Download Required Node Packages
--http Server
-cd napkin-notes/home/directory/location
-npm install
+2) Download Reqired Node Packages
+```
+  cd file/location/of/napkin-notes
+  npm install
+```
 
-3) Start the app
+3) Start the local server
+```
 node serverStart
-
-4) Visit
+```
+4) Open in your browser
 localhost:3000
+should do it
