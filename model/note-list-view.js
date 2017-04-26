@@ -3,6 +3,7 @@
   function NoteListView(notelist) {
 
     NoteListView.prototype.listNotes = function() {
+
       var list = document.createElement('ul');
       list.setAttribute('id','notes');
 
