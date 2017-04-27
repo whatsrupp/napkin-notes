@@ -12,11 +12,5 @@
     return this.notepad;
   };
 
-  NoteList.prototype.createAndStore = function(p) {
-    var a = new Note();
-    a.createNote(p);
-    this.storeNote(a);
-  };
-
   exports.NoteList = NoteList;
 })(this);

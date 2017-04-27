@@ -91,20 +91,3 @@
   exports.buildForm = buildForm;
   exports.setupPageDivs = setupPageDivs;
 })(this);
-
-setupPageDivs();
-buildForm();
-buildList();
-var noteList = new NoteList();
-function createNote() {
-  var textarea = document.getElementById('note-input-field');
-  var note = document.getElementById('note-input-field').value;
-  noteList.createAndStore(note);
-  var noteController = new NoteController(noteList);
-  noteController.appendList();
-  textarea.value = '';
-}
-
-//
-var form = document.getElementById('create-note-button');
-form.addEventListener("click", createNote, false);
