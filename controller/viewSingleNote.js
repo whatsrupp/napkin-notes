@@ -1,14 +1,14 @@
 (function(exports) {
 
-  viewSingleNote = function(note) {
-    viewSingleNote.prototype.displayNote = function () {
-      var note = document.createElement('p');
-      var noteString = document.createTextNode(noteModel.text);
-      note.appendChild(noteString);
-      return note;
-    };
+  viewSingleNote = function(noteIndex) {
+      var noteObject = noteList.notepad[noteIndex]
+      var noteString = noteObject.text
 
-  }
+      var noteViewDiv = document.createElement('div');
+      var noteTextNode = document.createTextNode(noteString);
+      noteViewDiv.appendChild(noteTextNode);
+      document.body.appendChild(noteViewDiv)
+    };
 
   exports.viewSingleNote = viewSingleNote;
 })(this);
